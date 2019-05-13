@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>absolute</title>
+	<style type="text/css">
+		.wrap{z-index:99;width: 50%;margin: auto;color:white;}
+		section{height: 400px; margin-bottom: 30px; position: relative; perspective: 3000px;}
+		.first{background: url(whitecake.gif);background-size: 140%;height:400px;overflow: hidden;}
+		.second{background: url(dress.gif);background-size:140%;}
+		.third{background: url(coco.gif);background-size:140%;}
+		.c1{background: url('original.gif'); width: 100px; height: 100px;background-size:cover;position: absolute; color: white;}
+		.c2{background: url('cake4.gif'); width: 100px; height: 100px;position: absolute; color: white;}
+		.fixed{background: url('dress2.png'); width: 500px; height: 500px;background-size:cover;position: absolute;}
+		.fixed3{background: url('rococostyle.png'); width: 300px; height: 300px;background-size:cover;}
+		.fixed4{background: url('marie2.png'); width: 240px; height: 300px;background-size:cover;position: absolute; color: white; margin-left: -100px;}
+		.cake{left:100px; width: 600px; z-index:99; position: absolute; animation: ro infinite 28s linear;bottom:50px;} 
+		@keyframes ro{
+			to{ transform: rotate(360deg); }
+		}
+
+		.cake2{left: 100px;width: 700px; z-index: 1; position: absolute; animation: lo 5s infinite cubic-bezier(1,.68,.24,.76); display: block;}
+		@keyframes lo{
+			from{}
+			to{width: 100px; transform: rotate3D(1,1,1,360deg);}
+		}
+		.cake3{width: 500px;margin-top:100px;margin-left:200px;display: block;position: absolute; animation: li 20s infinite linear;}
+		@keyframes li{
+			from{}
+			to{transform: rotate3D(1,0.5,0.5,120deg);transform: rotateX(150deg);}
+		}
+		.cake4{width: 300px;margin-top:-200px;margin-left:-100px;}
+		.cake5{width: 300px;margin-top:-100px;margin-left:-400px;}
+	</style>
+</head>
+<body>
+	<div class="background"></div>
+	<div class="fixed" style="bottom:50px;left: -20px; position: fixed;">
+	</div>
+	<div class="fixed3" style="bottom: 150px;right: 100px; position: fixed;">
+	</div>
+	<div class="fixed4" style="bottom: -10px;right: 150px; position: fixed;">
+	</div>
+	<div class="wrap">
+	<section class="first">
+		<img src="cake3.png" class="cake3">
+		<div class="c1" style="top: 0px; right: 00px;"></div>
+		<div class="c1" style="top: 120px; left: 300px;"></div>
+	</section>
+	<section class="second">
+		<img src="cake6.png" class="cake4" style="margin-left: 600px; margin-top: -600px;">
+		<img src="w.gif" class="cake5" style="margin-left: 400px; margin-top: -200px;">
+		<img src="cake2.png" class="cake2">
+		<img src="cake5.png" class="cake5">
+		<img src="hand.gif" class="cake4">
+	</section>
+	<section class="third">
+		<img src="cake4.png" class="cake4">
+		<img src="cake.png" class="cake">
+	</section>
+</div>
+</body>
+</html>
